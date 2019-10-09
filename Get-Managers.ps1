@@ -4,7 +4,8 @@ $userData = @()
 
 # GET ALL AZURE AD USERS
 $aadusers = Get-AzureADUser -All $true | Select-Object DisplayName, UserPrincipalName
-#$aadusers = Get-AzureADUser -Top 100 | Select-Object DisplayName, UserPrincipalName #If you need to test with 100 users
+#Uncomment the line below if you need to test with 100 users and comment line above
+#$aadusers = Get-AzureADUser -Top 100 | Select-Object DisplayName, UserPrincipalName
 
 # LOOP THROUGH USERS
 foreach ($usr in $aadusers)
